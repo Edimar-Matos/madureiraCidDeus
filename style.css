@@ -1,0 +1,19 @@
+body{
+   max-width: 80%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+
+#map { 
+    height: 500px;
+    width: 60%;
+    border-bottom: 5px solid black;
+    margin: 0 auto;
+
+ }
+ h1:hover{
+ 
+    overflow: visible;
+    color: red;
+ }
