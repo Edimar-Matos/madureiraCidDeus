@@ -7,7 +7,7 @@ body{
 
 #map { 
     height: 500px;
-    width: 60%;
+    width: 100%;
     border-bottom: 5px solid black;
     margin: 0 auto;
 
@@ -15,5 +15,5 @@ body{
  h1:hover{
  
     overflow: visible;
-    color: red;
+    color: rgb(255, 0, 34);
  }
