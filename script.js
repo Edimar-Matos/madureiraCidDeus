@@ -22,14 +22,14 @@ function acao() {
         popupAnchor: [-3, -76],
     });
     var central = L.icon({
-        iconUrl: './img/logomadureira.png',
+        iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [15, 44],
         popupAnchor: [-3, -76],
 
     });
     var igreja3 = L.icon({
-        iconUrl: './img/logomadureira.png',
+        iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
