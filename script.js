@@ -35,27 +35,27 @@ function acao() {
         popupAnchor: [-3, -76],
     });
     var igreja6 = L.icon({
-        iconUrl: './img/logomadureira.png',
+        iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
     });
 
     var setor101 = L.icon({
-        iconUrl: './img/logomadureira.png',
+        iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
     });
 
     var setor109 = L.icon({
-        iconUrl: './img/logomadureira.png',
+        iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
     });
     var setor110 = L.icon({
-        iconUrl: './img/logomadureira.png',
+        iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
@@ -75,7 +75,7 @@ function acao() {
     L.marker([-3.01643, -59.94699], { icon: igreja6 }).addTo(map).bindPopup('<h1>Setor 111</h1>');
     L.marker([-3.01134, -59.94572], { icon: setor101 }).addTo(map).bindPopup('<h1>Setor 101</h1>');
     L.marker([-3.02211, -59.94379], { icon: setor109 }).addTo(map).bindPopup('<h1>Setor 109</h1>');
-    L.marker([-3.02717, -59.94139], { icon: setor110 }).addTo(map).bindPopup('<h1>Setor 110</h1>');
+    L.marker([-3.02717, -59.94139], { icon: setor110 }).addTo(map).bindPopup('<h1>Setor 110</h1> <img src=./img/logomadureira.PNG>');
 
     L.marker([-3.01874, -59.94550], { icon: mersjorge }).addTo(map).bindPopup('<h1>Mercadinho S. Jorge</h1>');
 
