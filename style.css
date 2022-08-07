@@ -1,19 +1,45 @@
-body{
-   max-width: 80%;
-   margin: 0 auto;
-   text-align: center;
+*{
+   margin: 0;
+   padding: 0;
+
 }
 
-
-#map { 
-    height: 500px;
+body{
+ 
+   max-width: 100%;
+   text-align: center;
+}
+ .h1{
     width: 100%;
-    border-bottom: 5px solid black;
-    margin: 0 auto;
+   padding: 20px;
+   color: white;
+   background-color: rgb(57, 161, 144);
+   text-align: center;
 
  }
+ #map { 
+   height: 500px;
+   width: 70%;
+   border-bottom: 5px solid black; 
+
+}
  h1:hover{
  
     overflow: visible;
     color: rgb(255, 0, 34);
+ }
+ .central:hover{
+    background-color: red;
+ }
+table{
+   display:grid;
+ 
+  border: 2px solid;
+  
+ }
+ tr{
+    display: grid;
+    grid-template-columns: 30px 30px;
+    grid-template-rows: 40px 40px;
+    grid-gap:20px;
  }

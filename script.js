@@ -75,7 +75,7 @@ function acao() {
     L.marker([-3.01643, -59.94699], { icon: igreja6 }).addTo(map).bindPopup('<h1>Setor 111</h1>');
     L.marker([-3.01134, -59.94572], { icon: setor101 }).addTo(map).bindPopup('<h1>Setor 101</h1>');
     L.marker([-3.02211, -59.94379], { icon: setor109 }).addTo(map).bindPopup('<h1>Setor 109</h1>');
-    L.marker([-3.02717, -59.94139], { icon: setor110 }).addTo(map).bindPopup('<h1>Setor 110</h1> <img src=./img/logomadureira.PNG>');
+    L.marker([-3.02717, -59.94139], { icon: setor110 }).addTo(map).bindPopup('<h1>Setor 110</h1>');
 
     L.marker([-3.01874, -59.94550], { icon: mersjorge }).addTo(map).bindPopup('<h1>Mercadinho S. Jorge</h1>');
 
@@ -87,9 +87,12 @@ function acao() {
         fillOpacity: 0.3,
         radius: 100, //tamanho do  circulo em metros
         popupAnchor: [-5, 80],
+        
 
 
-    }).addTo(map).bindPopup('<h2> Raio de 100mt</h2>');
+    }).addTo(map).bindPopup('Raio de Ação 100mt');
+
+    
 
     var igreja3 = L.circle([-3.01528, -59.94243], {
         color: 'red',
@@ -99,6 +102,7 @@ function acao() {
         popupAnchor: [-5, 80],
 
     }).addTo(map).bindPopup('<h2> Raio de 100mt</h2>');
+    
 
     var igreja6 = L.circle([-3.01643, -59.94699], {
         color: 'red',
@@ -179,9 +183,12 @@ function acao() {
 
     ], {
         color: 'blue',
-        fillColor: 'purple'
+        fillColor: 'none',
+       
+        fillOpacity: 0.05,
+        
 
-    }).addTo(map).bindPopup('Raio de Ação');
+    }).addTo(map).bindPopup('Cidade de Deus');
 
     var braga_mendes = L.polygon([
 
