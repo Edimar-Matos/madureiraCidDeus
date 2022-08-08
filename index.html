@@ -1,105 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <title>MAdureira C de Deus</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body onload="acao()">
     <h1 class="h1">Igrejas Ministério de Madureira:</h1>
     <header>
 
-    
-   
-       <div id="map" ></div>
-   
-  
-   
-    
-      
+
+
+        <div id="map"></div>
         <div class="setor">
-            <h2 class="h2">Informações de Núcleo</h2>
-
-            <div class="setor109">Setor 109
-                <div class="pastor">pastor: Edimar</div>
-                <div class="membros"> 300 membros</div>
-                <div class="raio">Raio de 100mt</div>
-            </div>  
-            <div class="setor110">Setor 110
-                <div class="pastor">pastor: Edimar</div>
-                <div class="membros"> 300 membros</div>
-                <div class="raio">Raio de 100mt</div>
-            </div>                   
-            <div class="setor111">Setor 111
-                <div class="pastor">pastor: Edimar</div>
-                <div class="membros"> 300 membros</div>
-                <div class="raio">Raio de 100mt</div>
-            </div>               
-            <div class="setor113">Setor 113
-                <div class="pastor">pastor: Edimar</div>
-                <div class="membros"> 300 membros</div>
-                <div class="raio">Raio de 100mt</div>
-            </div>               
-            <div class="setor101">Setor 101
-                <div class="pastor">pastor: Edimar</div>
-                <div class="membros"> 300 membros</div>
-                <div class="raio">Raio de 100mt</div>
-            </div> 
-            <div class="central">central
-                <div class="pastor">pastor: Edimar</div>
-                <div class="membros"> 300 membros</div>
-                <div class="raio">Raio de 100mt</div>
-            </div>                              
-           
-            
-        </div>
-
-        <div class="grafico-barra">
-            <div class="colunas">
-                <div class="escala-y"><a href="tel:+"></a>
-                    a
-                </div>
-                <div class="area-grafico">
-                    <div class="area-barras">
-                        c
-                    </div>
-                    <div class="escala-x">
-                        b
-                    </div>
-                </div>
+            <div class="setor101"> Setor101
+                <div class="membros">40</div>
+            </div>
+            <div class="setor109"> Setor109
+                <div class="membros">25</div>
             </div>
         </div>
 
-   
+        <div class="dash-container" style="width: 100%; height: 100%;">
+            <h2 class="h2">Demonstrativo de Membros por Congregação</h2>
 
-            
-          
-          
-
-       
-  
-    
-
-    </header> 
+            <!-- Grafico Pizza/Torta -->
+            <div class="graph">
+                
+                <canvas id="chartPie" style="width: 100%; height: 100%;"></canvas>
+            </div>
+        </div>
 
 
+        <script>
+
+
+            // gráfico de Pizza/Torta
+            var ctxPie = document.getElementById("chartPie").getContext("2d");
+            var rotulosPie = ["Setor101", "Setor109", "Setor110", "Setor111", "Setor113", "Central"];
+            var dataPie = [40, 15, 25, 30, 50, 60];
+            var configPie = {
+                type: 'pie',
+                data: {
+                    labels: rotulosPie, // referenciando a variável de rótulos (labels) para o gráfico de pizza/torta
+                    datasets: [
+                        {
+                            label: 'Membrazia Local',
+                            data: dataPie, // referenciando a variável de dados para o gráfico de pizza/torta
+                            backgroundColor: [
+                                '#FF000044',
+                                '#FFFF0088',
+                                '#FF00FF44',
+                                '#00FFFF44',
+                                '#99009944',
+                                '#99990088',
+                                '#F0F00044',
+                                '#65002244',
+                            ],
+                            
+
+                            borderColor: [
+                                '#FF0000',
+                                '#FFFF00',
+                                '#FF00FF',
+                                '#00FFFF',
+                                '#990099',
+                                '#999900',
+                                '#F0F000',
+                                '#650022',
+                            ],
+                            borderWidth: 2
+                            
+                        }
+                    ]
+                },
+                options: {
+                    // por padrão, vem como 'true', e faz com que o gráfico se 'mantenha com o mesmo aspecto de proporção', não ficando responsivo
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        }
+                    }
+                }
+            }
+            var ax_chartPie = new Chart(ctxPie, configPie); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
+
+
+        </script>
 
 
 
-    <script src="./script.js">
+
+
+
+
+
+
+
+        <script src="./script.js">
 
 
         //https://leafletjs.com/examples/quick-start/example.html        
-    </script>
+        </script>
 </body>
+
 </html>
