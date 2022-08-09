@@ -60,6 +60,12 @@ function acao() {
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
     });
+    var setor102 = L.icon({
+        iconUrl: './img/logomadureira.PNG',
+        iconSize: [40],
+        iconAnchor: [10, 34],
+        popupAnchor: [-3, -76],
+    });
 
     var mersjorge = L.icon({
         iconUrl: './img/carcompra.PNG',
@@ -76,6 +82,7 @@ function acao() {
     L.marker([-3.01134, -59.94572], { icon: setor101 }).addTo(map).bindPopup('<h1>Setor 101</h1>');
     L.marker([-3.02211, -59.94379], { icon: setor109 }).addTo(map).bindPopup('<h1>Setor 109</h1>');
     L.marker([-3.02717, -59.94139], { icon: setor110 }).addTo(map).bindPopup('<h1>Setor 110</h1>');
+    L.marker([-3.01539, -59.93828], { icon: setor102 }).addTo(map).bindPopup('<h1>Setor 102</h1>');
 
     L.marker([-3.01874, -59.94550], { icon: mersjorge }).addTo(map).bindPopup('<h1>Mercadinho S. Jorge</h1>');
 
@@ -148,6 +155,15 @@ function acao() {
         popupAnchor: [-5, 80],
 
     }).addTo(map).bindPopup("<img src=./img/carcompra.PNG>");
+
+    var setor102 = L.circle([-3.01539, -59.93828], {
+        color: 'red',
+        fillColor: 'green',
+        fillOpacity: 0.3,
+        radius: 100, //tamanho do  circulo em metros
+        popupAnchor: [-5, 80],
+
+    }).addTo(map).bindPopup('<h2> Raio de 100mt</h2>');
 
     /*var polygon = L.polygon([
         [-3.016713, -59.945558],//ponto do poligno pata marcão

@@ -25,7 +25,7 @@ body{
 
    
  }
- @media screen and (max-width:900px){
+ @media screen and (max-width:600px){
     body{
        margin: 0 auto;
     }
@@ -58,7 +58,8 @@ body{
  #map { 
    height: 500px;
    width: 90%;
-   border-bottom: 5px solid black; 
+   border-bottom: 5px solid black;
+   border-right: 20px solid black; 
 
 
 }
@@ -122,6 +123,12 @@ header .setor{
   margin: 10px; 
 }
 .setor101{
+   color: white;
+  background-color: rgb(94, 13, 114);
+  border: 2px solid;
+  margin: 10px;    
+}
+.setor102{
    color: white;
   background-color: rgb(94, 13, 114);
   border: 2px solid;
