@@ -60,7 +60,7 @@ function acao() {
         iconAnchor: [10, 34],
         popupAnchor: [-3, -76],
     });
-    var setor102 = L.icon({
+    var setor1102 = L.icon({
         iconUrl: './img/logomadureira.PNG',
         iconSize: [40],
         iconAnchor: [10, 34],
@@ -82,7 +82,7 @@ function acao() {
     L.marker([-3.01134, -59.94572], { icon: setor101 }).addTo(map).bindPopup('<h1>Setor 101</h1>');
     L.marker([-3.02211, -59.94379], { icon: setor109 }).addTo(map).bindPopup('<h1>Setor 109</h1>');
     L.marker([-3.02717, -59.94139], { icon: setor110 }).addTo(map).bindPopup('<h1>Setor 110</h1>');
-    L.marker([-3.01539, -59.93828], { icon: setor102 }).addTo(map).bindPopup('<h1>Setor 102</h1>');
+    L.marker([-3.01539, -59.93828], { icon: setor1102 }).addTo(map).bindPopup('<h1>Setor 110-2</h1>');
 
     L.marker([-3.01874, -59.94550], { icon: mersjorge }).addTo(map).bindPopup('<h1>Mercadinho S. Jorge</h1>');
 
@@ -156,7 +156,7 @@ function acao() {
 
     }).addTo(map).bindPopup("<img src=./img/carcompra.PNG>");
 
-    var setor102 = L.circle([-3.01539, -59.93828], {
+    var setor1102 = L.circle([-3.01539, -59.93828], {
         color: 'red',
         fillColor: 'green',
         fillOpacity: 0.3,
