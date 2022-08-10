@@ -5,7 +5,7 @@
 }
 
 body{
- 
+ background-color: rgb(47, 131, 117);
    max-width: 100%;
 
    margin: 0 auto;
@@ -37,6 +37,7 @@ body{
     
       
    }  
+   
 
    .setor{
    display: flex;
@@ -61,7 +62,7 @@ body{
    height: 500px;
    width: 90%;
    border-bottom: 5px solid black;
-   border-right: 20px solid black; 
+   border-right: 5px solid black; 
 
 
 }
@@ -77,7 +78,7 @@ body{
 header .setor{ 
    flex-direction: row;
 
-   height: 60px;
+   height: 140px;
    text-align: center;
   
    background-color: rgb(133, 133, 121);
@@ -130,7 +131,7 @@ header .setor{
   border: 2px solid;
   margin: 10px;    
 }
-.setor102{
+.setor110-2{
    color: white;
   background-color: rgb(94, 13, 114);
   border: 2px solid;

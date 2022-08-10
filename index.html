@@ -25,27 +25,29 @@
 
 
         <div id="map"></div>
+       
         <div class="setor">
             <div class="setor101"> Setor101
                 <div class="membros">40</div>
             </div>
-            <div class="setor102"> Setor102
-                <div class="membros">50</div>
-            </div>
+            
             <div class="setor109"> Setor109
-                <div class="membros">15</div>
+                <div class="membros">30</div>
             </div>
             <div class="setor110"> Setor110
-                <div class="membros">25</div>
+                <div class="membros">50</div>
+            </div>
+            <div class="setor110-2"> Setor110-2
+                <div class="membros">50</div>
             </div>
             <div class="setor111"> Setor111
-                <div class="membros">30</div>
+                <div class="membros">50</div>
             </div>
             <div class="setor113"> Setor113
                 <div class="membros">50</div>
             </div>
             <div class="central"> Central
-                <div class="membros">60</div>
+                <div class="membros">100</div>
             </div>
         </div>
 
@@ -65,8 +67,8 @@
 
             // gráfico de Pizza/Torta
             var ctxPie = document.getElementById("chartPie").getContext("2d");
-            var rotulosPie = ["Setor101","Setor102", "Setor109", "Setor110", "Setor111", "Setor113", "Central"];
-            var dataPie = [40, 10, 15, 25, 30, 50, 60];
+            var rotulosPie = ["Setor101", "Setor109", "Setor110", "Setor110-2", "Setor111", "Setor113", "Central"];
+            var dataPie = [40, 30, 50, 50, 50, 50, 100];
             var configPie = {
                 type: 'pie',
                 data: {
