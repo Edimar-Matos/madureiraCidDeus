@@ -40,8 +40,9 @@ body{
 
    .setor{
    display: flex;
-   justify-content:center; 
-   flex-direction: row;     
+   flex-wrap: wrap;
+   justify-content:space-evenly; 
+     
    text-align: center; 
  
    
@@ -51,7 +52,7 @@ body{
    header #map { 
       height: 500px;
       width: 90%;     
-      touch-action: auto;
+     
    } 
    
 }
